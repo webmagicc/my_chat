@@ -1,8 +1,9 @@
 from django.conf.urls import url
 
-from .consumers import ChatConsumer
+
 
 
 websocket_urls = [
-    url(r'^ws/chat/$', ChatConsumer),
+    url(r'^ws/chat/$', ChatAsyncJsonConsumer),
+    url(r'^ws/chat/(?P<room_name>\w+)/$', ChatConsumer),
 ]
