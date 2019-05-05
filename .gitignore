@@ -1,3 +1,5 @@
 env
 my_chat/local.py
 .idea
+db.sqlite3
+dump.rdb
