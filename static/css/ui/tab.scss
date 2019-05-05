@@ -1,0 +1,126 @@
+$open: 'Open Sans', sans-serif;
+$pro: 'Source Sans Pro', sans-serif;
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+$bg-color: #eceff1;
+$gray-bg: #f5f5f5;
+
+$color-success: #50c37f;
+$color-danger: #ff5252;
+$color-warning: #fb8c00;
+$color-primary: #039be5;
+$color-secondary: #b6b7b9;
+$color-info: #67d7e8;
+$color-dark: #343a40;
+$color-light-dark: #252632;
+$color-purple: #7e57c2;
+$color-light: #78909c;
+$color-white: #fff;
+
+.nav-tabs {
+	border-color: $bg-color;
+	.nav-item {
+		.nav-link {
+			border-radius: 0;
+			color: #b0bec5;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 23px;
+			padding: 10px 15px;
+			text-transform: capitalize;
+			&:hover {
+				border-color: transparent;
+				color: #6a7074;
+			}
+			&.active {
+				border-color: #e2e7ea;
+				border-bottom-color: transparent;
+				color: #6a7074;
+			}
+		}
+	}
+	.dropdown-menu {
+		border-radius: 0;
+		padding: 0;
+	}
+	.dropdown-item {
+		color: #b0bec5;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 23px;
+		padding: 5px 15px;
+		&:hover,
+		&:active,
+		&.active {
+			background: $bg-color;
+			color: #6a7074;
+		}
+	}
+}
+.nav-pills {
+	.nav-item {
+		.nav-link {
+			&:hover {
+				background: transparent;
+			}
+			&.active {
+				background-color: #039be5;
+				color: $color-white;
+			}
+		}
+	}
+	&.radius {
+		border: none;
+		.nav-item {
+			.nav-link {
+				border: none;
+				border-radius: .25rem;
+			}
+		}
+	}
+}
+.tab-content {
+	padding: 25px 0 15px;
+	.tab-pane {
+		color: $color-light;
+		font-family: $open;
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+.boxed {
+	.tab-content {
+		border: 1px solid $bg-color;
+		border-top-color: transparent;
+		padding: 15px; 
+	}
+}
+.vertical-tab {
+	.flex-column {
+		border-bottom: none;
+		border-right: 1px solid #e2e7ea;
+		.nav-item {
+			.nav-link {
+				border-right-color: transparent;
+				&.active {
+					border-bottom-color: #e2e7ea;
+					margin-right: -1px;
+				}
+			}
+		}
+		&.nav-pills {
+			.nav-item {
+				.nav-link {
+					&.active {
+						border-color: #039be5;
+					}
+				}
+			}
+		}
+	}
+	.tab-content {
+		padding: 0 15px 0 0;
+	}
+}

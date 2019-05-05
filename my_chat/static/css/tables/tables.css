@@ -1,0 +1,11 @@
+.dashboard-contents table.dataTable {
+  border: none !important;
+  margin: 0 !important; }
+.dashboard-contents table [class*="bg"] {
+  color: #fff; }
+.dashboard-contents table [class*="color-dark"]:hover {
+  color: #343a40 !important; }
+
+.table .thead-dark th,
+.table-dark td, .table-dark th, .table-dark thead th {
+  background: #343542; }

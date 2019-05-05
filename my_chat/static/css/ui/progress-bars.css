@@ -1,0 +1,16 @@
+.progress {
+  border-radius: 0;
+  margin-bottom: 20px; }
+  .progress:last-child {
+    margin-bottom: 0; }
+  .progress.with-skills {
+    margin: 20px 0 30px;
+    overflow: visible;
+    position: relative; }
+    .progress.with-skills:last-child {
+      margin-bottom: 0 !important; }
+    .progress.with-skills .progress-header {
+      left: 0;
+      top: -20px;
+      position: absolute;
+      width: 100%; }

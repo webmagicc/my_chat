@@ -1,0 +1,24 @@
+/* ---------- Importing Css Files --------- */
+
+@import url("widget/widgets.css");
+@import url("icon-weather.css");
+@import url("chart/chartist.min.css");
+@import url("calendar/fullcalendar.min.css");
+@import url("calendar/calendar.css");
+
+#sparkline5.sparkline-chart canvas {
+	max-height: 140px;
+	max-width: 100%;
+}
+.devices {
+	margin-top: 35px;
+}
+.float-chart {
+	margin-top: 20px;
+}
+.traffic-chart {
+	margin: 0 -12px;
+}
+.traffic-chart svg {
+	min-height: inherit;
+}

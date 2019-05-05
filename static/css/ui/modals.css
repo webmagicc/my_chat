@@ -1,0 +1,205 @@
+.modal .modal-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  .modal .modal-header .close {
+    color: #6a7074;
+    z-index: 9; }
+.modal .modal-title {
+  color: #6a7074;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase; }
+.modal .modal-body {
+  color: #78909c;
+  font-size: 14px;
+  line-height: 22px; }
+  .modal .modal-body h1, .modal .modal-body h2, .modal .modal-body h3, .modal .modal-body h4, .modal .modal-body h5, .modal .modal-body h6 {
+    color: #6a7074;
+    font-weight: 400; }
+.modal .modal-content {
+  border-radius: 0; }
+.modal .modal-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.125); }
+
+.left-modal .modal .modal-dialog {
+  margin: 0;
+  height: 100vh;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  -webkit-transform: translate(-100%, 0) !important;
+  transform: translate(-100%, 0) !important; }
+.left-modal .modal .modal-content {
+  height: 100%; }
+.left-modal .modal.show .modal-dialog {
+  -webkit-transform: translate(0, 0) !important;
+  transform: translate(0, 0) !important; }
+
+.right-modal .modal .modal-dialog {
+  margin: 0;
+  height: 100vh;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  -webkit-transform: translate(1000%, 0) !important;
+  transform: translate(1000%, 0) !important; }
+.right-modal .modal .modal-content {
+  height: 100%; }
+.right-modal .modal.show .modal-dialog {
+  -webkit-transform: translate(0, 0) !important;
+  transform: translate(0, 0) !important; }
+
+.center-modal .modal .modal-dialog,
+.fill-modal .modal .modal-dialog {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+.center-modal .modal.show .modal-dialog,
+.fill-modal .modal.show .modal-dialog {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.bottom-modal .modal .modal-dialog {
+  bottom: 0;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0); }
+
+.fill-modal .modal {
+  background: rgba(255, 255, 255, 0.97); }
+  .fill-modal .modal .modal-content {
+    border: none; }
+
+.background-modal {
+  display: inline-block;
+  margin: 2px 5px 2px 0; }
+  .background-modal .modal .modal-title,
+  .background-modal .modal .modal-body {
+    color: #fff; }
+    .background-modal .modal .modal-title h1, .background-modal .modal .modal-title h2, .background-modal .modal .modal-title h3, .background-modal .modal .modal-title h4, .background-modal .modal .modal-title h5, .background-modal .modal .modal-title h6,
+    .background-modal .modal .modal-body h1,
+    .background-modal .modal .modal-body h2,
+    .background-modal .modal .modal-body h3,
+    .background-modal .modal .modal-body h4,
+    .background-modal .modal .modal-body h5,
+    .background-modal .modal .modal-body h6 {
+      color: #fff; }
+  .background-modal #success .modal-content {
+    background-color: #50c37f;
+    border-color: #50c37f; }
+  .background-modal #error .modal-content {
+    background-color: #ff5252;
+    border-color: #ff5252; }
+  .background-modal #warning .modal-content {
+    background-color: #fb8c00;
+    border-color: #fb8c00; }
+  .background-modal #primary .modal-content {
+    background-color: #039be5;
+    border-color: #039be5; }
+  .background-modal #secondary .modal-content {
+    background-color: #b6b7b9;
+    border-color: #b6b7b9; }
+  .background-modal #info .modal-content {
+    background-color: #67d7e8;
+    border-color: #67d7e8; }
+  .background-modal #black .modal-content {
+    background-color: #67d7e8;
+    border-color: #67d7e8; }
+  .background-modal #dark .modal-content {
+    background-color: #343a40; }
+
+.custom-modal {
+  display: inline-block;
+  margin: 2px 5px 2px 0; }
+  .custom-modal .modal {
+    padding-top: 10vh; }
+  .custom-modal .close {
+    margin: 0;
+    right: 15px;
+    top: 15px;
+    position: absolute; }
+  .custom-modal .modal-header {
+    border: none;
+    padding: 0; }
+    .custom-modal .modal-header .close {
+      font-size: 13px; }
+  .custom-modal .modal-body {
+    padding-top: 0; }
+    .custom-modal .modal-body i {
+      display: block;
+      font-size: 60px; }
+    .custom-modal .modal-body h1, .custom-modal .modal-body h2, .custom-modal .modal-body h3, .custom-modal .modal-body h4, .custom-modal .modal-body h5, .custom-modal .modal-body h6 {
+      font-weight: 700; }
+  .custom-modal h1.m-0 {
+    font-size: 3.125rem; }
+  .custom-modal .modal-footer button {
+    margin: 0 auto; }
+
+.modal-open .modal {
+  background: #30313e; }
+
+#modal-form .modal-dialog,
+#subscribe-form .modal-dialog {
+  max-width: 800px; }
+#modal-form .modal-content,
+#subscribe-form .modal-content {
+  border: none; }
+#modal-form label,
+#subscribe-form label {
+  color: #78909c;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0; }
+#modal-form form .form-control,
+#subscribe-form form .form-control {
+  border: 1px solid #e2e7ea;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  height: 45px;
+  margin-bottom: 10px; }
+#modal-form form input[type="submit"],
+#subscribe-form form input[type="submit"] {
+  border-color: #039be5;
+  font-weight: 700; }
+
+#subscribe-form form {
+  position: relative;
+  z-index: 0; }
+  #subscribe-form form:before {
+    content: "\f061";
+    background: #039be5;
+    font-family: 'FontAwesome';
+    color: #fff;
+    font-size: 1rem;
+    height: 45px;
+    line-height: 45px;
+    width: 45px;
+    text-align: center;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1; }
+  #subscribe-form form input {
+    padding-right: 60px; }
+  #subscribe-form form input[type="submit"] {
+    background: transparent;
+    border-color: #039be5;
+    font-size: 0;
+    height: 45px;
+    width: 45px;
+    right: 0;
+    top: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 2; }
+#subscribe-form span {
+  color: #b0bec5;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px; }

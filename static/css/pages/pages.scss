@@ -1,0 +1,142 @@
+$open: 'Open Sans', sans-serif;
+$pro: 'Source Sans Pro', sans-serif;
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+$bg-color: #eceff1;
+$gray-bg: #f5f5f5;
+
+$color-success: #50c37f;
+$color-danger: #ff5252;
+$color-warning: #fb8c00;
+$color-primary: #039be5;
+$color-secondary: #b6b7b9;
+$color-info: #67d7e8;
+$color-dark: #343a40;
+$color-light-dark: #252632;
+$color-purple: #7e57c2;
+$color-light: #78909c;
+$color-white: #fff;
+
+.login-logo,
+.register-logo {
+  text-align: center;
+  span{
+      color: #ffffff;
+      font-size: 24px;
+  }
+  a {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 130px;
+  }
+}
+
+.login-content,
+.register-content {
+  margin: 10rem auto;
+  max-width: 400px;
+}
+.login-form,
+.register-form {
+  background: #ffffff;
+  font-family: $open;
+  font-size: 14px;
+  padding: 30px 30px 20px;
+  border-radius: 2px;
+}
+.login-form h4,
+.register-form h4 {
+  color: #878787;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.login-form .checkbox,
+.register-form .checkbox {
+  color: #878787;
+}
+.login-form .checkbox label,
+.register-form .checkbox label {
+  text-transform: none;
+}
+.login-form .btn,
+.register-form .btn {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 15px;
+  border: 0px;
+}
+.login-form label,
+.register-form label {
+  color: #878787;
+  text-transform: capitalize;
+}
+.login-form label a,
+.register-form label a {
+  color: #ff2e44;
+}
+.social-login-content,
+.social-register-content {
+  margin: 0px -30px;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 30px 0px;
+  background: #fcfcfc;
+}
+.social-button {
+  padding: 0 30px;
+  .facebook{
+    background: #3b5998;
+    color: $color-white;
+    &:hover{
+        background: #344e86;
+    }
+}
+.twitter{
+    background: #00aced;
+    color: $color-white;
+    &:hover{
+        background: #0099d4;
+    }
+}
+
+}
+.social-button i {
+  padding: 19px;
+}
+.register-link a {
+  color: #ff2e44;
+}
+
+.error-wrapper {
+  h1 {
+    color: $color-primary;
+    font-size: 10rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .error-content {
+    columns: $color-white;
+    padding: 3rem 0;
+    h2 {
+      color: $color-white;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+    p {
+      color: $color-white;
+      font-size: 15px;
+    }
+  }
+  .back-btn {
+    color: $color-white;
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 4rem;
+    padding: 10px 25px;
+    text-transform: uppercase;
+  }
+}

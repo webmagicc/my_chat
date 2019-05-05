@@ -1,0 +1,293 @@
+$open: 'Open Sans', sans-serif;
+$pro: 'Source Sans Pro', sans-serif;
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+$bg-color: #eceff1;
+$gray-bg: #f5f5f5;
+
+$color-success: #50c37f;
+$color-danger: #ff5252;
+$color-warning: #fb8c00;
+$color-primary: #039be5;
+$color-secondary: #b6b7b9;
+$color-info: #67d7e8;
+$color-dark: #343a40;
+$color-light-dark: #252632;
+$color-purple: #7e57c2;
+$color-light: #78909c;
+$color-white: #fff;
+
+
+/* ------- Mail Content ------- */
+
+.mail-content {
+    .box-header,
+    .mailbox-controls {
+        display: inline-block;
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+    .card-title {
+        font-family: $pro;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .nav-pills .nav-link, 
+    .nav-pills >.nav-link {
+        border-left: 2px solid transparent;
+        border-bottom: 1px solid $bg-color;
+        border-radius: 0;
+        color: $color-dark;
+        font-family: $pro;
+        font-size: 15px;
+        line-height: 1.25;
+        padding: 10px 15px;
+        i {
+            font-size: 18px;
+            float: left;
+            margin: 0 10px 0 0;
+        }
+        &:hover {
+            background-color: $bg-color;
+            border-left-color: $color-primary;
+        }
+    }
+    .nav-pills .nav-link.active, 
+    .nav-pills .show>.nav-link {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+    .col-md-3 {
+        .box {
+            margin-bottom: 30px;
+        }
+    }
+    &.read {
+        .mailbox-controls {
+            width: initial;
+        }
+        .avatar {
+            max-width: 50px;
+        }
+        .name {
+            color: $basecolor;
+            font-family: $pro;
+            font-size: 15px;
+            text-transform: capitalize;
+            .mailbox-read-time {
+                font-family: $pro;
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+        .btn-box-tool {
+            background-color: $color-light;
+            color: $color-white;
+            font-size: 15px;
+        }
+    }
+}
+.mailbox-read-info {
+    padding: 10px 0;
+}
+
+.icheckbox_flat-blue,
+.iradio_flat-blue {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background: url(blue.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_flat-blue {
+    background-position: 0 0;
+}
+.icheckbox_flat-blue.checked {
+    background-position: -22px 0;
+}
+.icheckbox_flat-blue.disabled {
+    background-position: -44px 0;
+    cursor: default;
+}
+.icheckbox_flat-blue.checked.disabled {
+    background-position: -66px 0;
+}
+
+.iradio_flat-blue {
+    background-position: -88px 0;
+}
+.iradio_flat-blue.checked {
+    background-position: -110px 0;
+}
+.iradio_flat-blue.disabled {
+    background-position: -132px 0;
+    cursor: default;
+}
+.iradio_flat-blue.checked.disabled {
+    background-position: -154px 0;
+}
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox_flat-blue,
+    .iradio_flat-blue {
+        background-image: url(blue@2x.png);
+        -webkit-background-size: 176px 22px;
+        background-size: 176px 22px;
+    }
+}
+.mailbox-messages> table {
+    margin: 0;
+    tbody,
+    tr {
+        width: 100%;
+    }
+    td,th {
+        vertical-align: middle;
+    }
+}
+.mailbox-messages .mailbox-date {
+    font-size: 12px;
+    color: $basecolor;
+}
+
+.mailbox-messages table a {
+    color: $basecolor;
+}
+
+.mailbox-controls .btn {
+    padding: 10px 15px 7px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(169, 169, 169, .14), 0 3px 1px -2px rgba(169, 169, 169, .2), 0 1px 5px 0 rgba(169, 169, 169, .12);
+    box-shadow: 0 2px 2px 0 rgba(169, 169, 169, .14), 0 3px 1px -2px rgba(169, 169, 169, .2), 0 1px 5px 0 rgba(169, 169, 169, .12);
+}
+.btn-shadow, .lockscreen-box-body {
+    -webkit-box-shadow: 0 2px 2px 0 rgba(169, 169, 169, .14), 0 3px 1px -2px rgba(169, 169, 169, .2), 0 1px 5px 0 rgba(169, 169, 169, .12);
+}
+.btn-shadow {
+    box-shadow: 0 2px 2px 0 rgba(169, 169, 169, .14), 0 3px 1px -2px rgba(169, 169, 169, .2), 0 1px 5px 0 rgba(169, 169, 169, .12);
+}
+.btn-shadow:hover {
+    -webkit-box-shadow: 0 14px 26px -12px rgba(169, 169, 169, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(169, 169, 169, .2);
+    box-shadow: 0 14px 26px -12px rgba(169, 169, 169, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(169, 169, 169, .2);
+}
+.mailbox-controls .btn i {
+    font-size: 16px;
+}
+.mailbox-read-message {
+    padding: 10px 0;
+}
+.mailbox-attachments {
+    display: flex;
+    flex-direction: row;
+    max-width: 350px;
+    padding: 0;
+}
+.mailbox-attachments li {
+    display: inline-block;
+    flex: 0 0 33%;
+    max-width: 33%;
+    float: left;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+.mailbox-attachment-name {
+    float: left;
+    font-weight: 300;
+    color: $basecolor;
+    font-size: 10px;
+    width: 100%;
+}
+.mailbox-attachment-info {
+    padding: 10px;
+    background: $bg-color;
+}
+.mailbox-attachment-size {
+    color: $basecolor;
+    font-size: 12px;
+    a {
+        color: $basecolor;
+        font-size: 15px;
+        line-height: 1;
+        padding: 0;
+    }
+}
+.mailbox-attachment-icon {
+    display: inline-block;
+    text-align: center;
+    font-size: 36px;
+    color: $basecolor;
+    padding: 39px 10px;
+    width: 100%;
+}
+.mailbox-attachment-icon.has-img {
+    padding: 0;
+}
+.mailbox-attachment-icon.has-img>img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --------- Compose -------- */
+
+.wysihtml5-toolbar {
+    .btn {
+        border: 1px solid $bg-color;
+        color: $basecolor;
+        font-family: $pro;
+        font-size: 14px;
+    }
+    .dropdown-menu {
+        border-color: $bg-color;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .dropdown-item {
+        &:active {
+            background-color: transparent;
+            outline: 0;
+        }
+        a {
+            color: $basecolor;
+            font-family: $pro;
+            font-size: 14px;
+            &:focus {
+                background-color: transparent;
+                outline: 0;
+            }
+        }
+    }
+}
+.modal-header {
+    .close {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+        text-transform: uppercase;
+    }
+}
+.modal-footer {
+    .btn-primary {
+        color: $color-white;
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}

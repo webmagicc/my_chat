@@ -1,0 +1,100 @@
+.card {
+  border-radius: 0; }
+  .card a {
+    color: #6a7074;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px; }
+  .card .card-header {
+    border-radius: 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase; }
+    .card .card-header i {
+      color: #6a7074;
+      font-size: 1rem; }
+  .card .location {
+    color: #6a7074;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px; }
+  .card .card-body {
+    padding: 15px; }
+  .card .corner-ribon {
+    background-image: url(../../../images/blue.png);
+    text-align: center;
+    width: 71px;
+    height: 71px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px; }
+    .card .corner-ribon i {
+      padding: 10px 0 0 35px;
+      color: #fff; }
+  .card .card-title {
+    color: #6a7074;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize; }
+  .card .twt-feed .wtt-mark {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 100px;
+    position: absolute;
+    top: 15px;
+    left: 40%; }
+  .card.profile {
+    background: #fff;
+    text-align: center; }
+    .card.profile img {
+      height: 130px;
+      width: 130px;
+      margin: 15px auto 0; }
+  .card.with-title.title-bottom .card-header {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom: none; }
+  .card.text-white .card-header {
+    color: #fff; }
+  .card.text-white .card-body {
+    color: #fff; }
+    .card.text-white .card-body .card-title,
+    .card.text-white .card-body p {
+      color: #fff; }
+  .card .blockquote-footer {
+    font-size: 14px; }
+
+.twt-category li {
+  border-right: 1px solid #eceff1;
+  color: #bdbdbd;
+  float: left;
+  font-size: 13px;
+  list-style: none;
+  text-align: center;
+  width: 33.33%; }
+  .twt-category li:last-child {
+    border: none; }
+
+.twt-footer {
+  color: #6a7074;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px; }
+  .twt-footer i {
+    color: #6a7074;
+    margin-right: 2px; }
+
+.border-success .card-header {
+  border-bottom-color: #50c37f !important; }
+
+.border-danger .card-header {
+  border-bottom-color: #ff5252 !important; }
+
+.border-warning .card-header {
+  border-bottom-color: #fb8c00 !important; }
+
+.border-primary .card-header {
+  border-bottom-color: #039be5 !important; }
+
+.border-secondary .card-header {
+  border-bottom-color: #b6b7b9 !important; }
+
+.border-info .card-header {
+  border-bottom-color: #67d7e8 !important; }

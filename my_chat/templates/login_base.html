@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Hi5Dash - HTML5 Admin Template By Jewel Theme</title>
+  <meta name="description" content="Hi5Dash - HTML5 Admin Template By Jewel Theme">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Import Template Icons CSS Files -->
+  <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/css/simple-line-icons.css">
+  <link rel="stylesheet" href="/static/css/linea-basic.css">
+
+  <!-- Import Custom Country Select CSS Files -->
+  <link rel="stylesheet" href="/static/css/countrySelect.min.css">
+
+  <!-- Import Perfect ScrollBar CSS Files -->
+  <link rel="stylesheet" href="/static/css/perfect-scrollbar.css">   
+
+  <!-- Import Bootstrap CSS File -->
+
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css"> 
+
+  <!-- Import Template's CSS Files -->
+  <link rel="stylesheet" href="/static/css/presets.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/pages/pages.css">
+  <link rel="stylesheet" href="/static/css/responsive.css">
+
+
+</head>
+
+
+<body>
+
+
+  <div class="admin-login d-flex align-content-center flex-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-md-3">
+          <div class="login-content bg-light">
+            <div class="login-logo pt-4 pb-3 background-bg">
+              <a href="../index.html">
+                <img class="align-content" src="/static/images/logo2.png" alt="">
+              </a>
+              <p class="mt-2 mb-0 color-white">Responsive Bootstrap 4 Admin Template</p>
+            </div>
+            <div class="login-form">
+                {% block form %}
+              <form>
+                <div class="form-group">
+
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+
+                  <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="checkbox">
+                  <lSource Sans Pro>
+                    <input type="checkbox"> Remember Me
+                  </lSource Sans Pro>
+                  <lSource Sans Pro class="pull-right">
+                    <a href="#">Forgotten Password?</a>
+                  </lSource Sans Pro>
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-flat mb-3 mt-3">Sign in</button>
+
+                <div class="register-link mt-1 text-center">
+                  <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
+                </div>
+              </form>
+                {% endblock form %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="/static/js/jquery-3.2.1.slim.min.js"></script>
+  <script src="/static/js/plugins.js"></script>
+  <script src="/static/js/main.js"></script>
+
+
+</body>
+</html>

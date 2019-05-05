@@ -1,0 +1,79 @@
+$open: 'Open Sans', sans-serif;
+$pro: 'Source Sans Pro', sans-serif;
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+$bg-color: #eceff1;
+$gray-bg: #f5f5f5;
+
+$color-success: #50c37f;
+$color-danger: #ff5252;
+$color-warning: #fb8c00;
+$color-primary: #039be5;
+$color-secondary: #b6b7b9;
+$color-info: #67d7e8;
+$color-dark: #343a40;
+$color-light-dark: #252632;
+$color-purple: #7e57c2;
+$color-light: #78909c;
+$color-white: #fff;
+
+.carousel-caption {
+	color: $color-white;
+	h3,
+	p {
+		color: $color-white;
+	}
+}
+.carousel-item,
+.owl-carousel {
+	.overlay {
+		background-color: rgba(0, 0, 0, 0.3);
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		position: absolute;
+	}
+}
+.carousel-indicators li {
+	cursor: pointer;
+	height: 5px;
+}
+.owl-nav.disabled {
+	cursor: auto !important;
+	display: block !important;
+	height: 30px;
+	left: 0;
+	top: 50%;
+	margin-top: -15px;
+	pointer-events: auto !important;
+	position: absolute;
+	width: 100%;
+	button {
+		background-color: rgba(255, 255, 255, 0.5) !important;
+		color: $color-white !important;
+		cursor: pointer !important;
+		font-size: 25px !important;
+		height: 30px;
+		width: 30px;
+		line-height: 30px !important;
+		position: relative;
+		text-align: center;
+		span {
+			height: 100%;
+			line-height: 1;
+			left: 0;
+			top: 0;
+			position: absolute;
+			width: 100%;
+		}
+		&.owl-prev {
+			float: left;
+		}
+		&.owl-next {
+			float: right;
+		}
+	}
+}

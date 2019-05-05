@@ -1,0 +1,81 @@
+$open: 'Open Sans', sans-serif;
+$pro: 'Source Sans Pro', sans-serif;
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+$bg-color: #eceff1;
+$gray-bg: #f5f5f5;
+
+$color-success: #50c37f;
+$color-danger: #ff5252;
+$color-warning: #fb8c00;
+$color-primary: #039be5;
+$color-secondary: #b6b7b9;
+$color-info: #67d7e8;
+$color-dark: #343a40;
+$color-light-dark: #252632;
+$color-purple: #7e57c2;
+$color-light: #78909c;
+$color-white: #fff;
+
+button,
+.btn {
+	color: $color-white;
+	margin: 4px 4px 4px 0;
+	&.btn-outline-success {
+		border-color: #50c37f;
+		color: #50c37f;
+		&:hover {
+			background-color: #50c37f;
+			color: $color-white; 
+		}
+	}
+	&.btn-outline-danger {
+		border-color: #ff5252;
+		color: #ff5252;
+		&:hover {
+			background-color: #ff5252;
+			color: $color-white; 
+		}
+	}
+	&.btn-outline-warning {
+		border-color: #fb8c00;
+		color: #fb8c00;
+		&:hover {
+			background-color: #fb8c00;
+			color: $color-white; 
+		}
+	}
+	&.btn-outline-primary {
+		border-color: #039be5;
+		color: #039be5;
+		&:hover {
+			background-color: #039be5;
+			color: $color-white; 
+		}
+	}
+	&.btn-outline-secondary {
+		border-color: #b6b7b9;
+		color: #b6b7b9;
+		&:hover {
+			background-color: #b6b7b9;
+			color: $color-white; 
+		}
+	}
+	&.btn-outline-info {
+		border-color: #67d7e8;
+		color: #67d7e8;
+		&:hover {
+			background-color: #67d7e8;
+			color: $color-white; 
+		}
+	}
+	&.app-btn {
+		padding: 8px 15px;
+		i {
+			display: block;
+			padding-top: 5px;
+		}
+	}
+}

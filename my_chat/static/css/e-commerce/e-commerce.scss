@@ -1,0 +1,201 @@
+$open: 'Open Sans', sans-serif;
+$pro: 'Source Sans Pro', sans-serif;
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+$bg-color: #eceff1;
+$gray-bg: #f5f5f5;
+
+$color-success: #50c37f;
+$color-danger: #ff5252;
+$color-warning: #fb8c00;
+$color-primary: #039be5;
+$color-secondary: #b6b7b9;
+$color-info: #67d7e8;
+$color-dark: #343a40;
+$color-light-dark: #252632;
+$color-purple: #7e57c2;
+$color-light: #78909c;
+$color-white: #fff;
+
+.price-head {
+ padding: 10px 0 50px;
+
+ h1 {
+     font-size: 32px;
+     font-weight: normal;
+     color: $color-info;
+ }
+}
+.pricing-table {
+    background: $gray-bg;
+    text-align: center;
+    padding: 0 0 25px 0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    &.popular {
+        color: $basecolor;
+        position: relative;
+        .pricing-head {
+            background: $color-info;
+            border-radius: 5px 5px 0 0;
+            -webkit-border-radius: 5px 5px 0 0;
+            position: relative;
+            height: 170px;
+        }
+    }
+}
+.popular .price-actions .btn {
+    background: $color-info !important;
+    cursor: pointer;
+}
+.pricing-table .price-actions .btn {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: $basecolor;
+    color: $color-white;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.pricing-head {
+    background: $basecolor;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    position: relative;
+    height: 170px;
+}
+.pricing-head h1 {
+    font-size: 24px;
+    font-weight: 300;
+    padding-top: 30px;
+    color: $color-white;
+    text-transform: uppercase;
+}
+.pricing-quote {
+    background: $color-white;
+    padding: 40px 0;
+    color: $basecolor;
+    font-size: 45px;
+    font-weight: 100;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin: -85px auto;
+    z-index: 100;
+    position: relative;
+}
+.pricing-quote:after {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 10px solid rgba(255,255,255,0.5);
+    margin: -85px auto;
+    z-index: 100;
+    position: absolute;
+    content: "";
+    left: -10px;
+    top: 75px;
+}
+.pricing-table ul {
+    margin: 120px 0 50px;
+    padding: 0;
+}
+.pricing-table ul li {
+    margin: 0 2em;
+    padding: 1em 0;
+    text-align: left;
+    font-weight: 300;
+}
+.pricing-table ul li i {
+    margin-right: 10px;
+}
+.pricing-quote span.note {
+    display: inline;
+    font-size: 18px;
+    line-height: 0.8em;
+    position: relative;
+    top: -18px;
+}
+.pricing-quotation {
+    background: #EEEEEE;
+    padding: 20px 20px 35px 20px;
+    margin-bottom: 100px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.pricing-quotation h3 {
+    font-weight: 300;
+}
+.pricing-quotation p {
+    margin-bottom: 0px;
+}
+.pricing-plan {
+    position: relative;
+}
+.pricing-quotation:before {
+    background-color: #EEEEEE;
+    border-color: #EEEEEE;
+    border-image: none;
+    border-right: 1px solid #EEEEEE;
+    border-style: none;
+    top: -7px;
+    content: "";
+    display: block;
+    height: 14px;
+    left: 48%;
+    position: absolute;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width:  15px;
+}
+
+.order-content {
+    table {
+        .btn {
+            font-size: 14px;
+            line-height: 1;
+            padding: 5px 15px;
+        }
+    }
+}
+
+.invoice-content {
+  thead {
+    tr {
+      border-width: 1px;
+
+      th {
+        font-size: 0.9375rem;
+        font-weight: 500;
+        border-width: 1px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-width: 1px;
+
+      td {
+        font-size: 0.9375rem;
+        border-width: 1px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

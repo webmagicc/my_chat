@@ -1,0 +1,72 @@
+$open: 'Open Sans', sans-serif;
+$pro: 'Source Sans Pro', sans-serif;
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+$bg-color: #eceff1;
+$gray-bg: #f5f5f5;
+
+$color-success: #50c37f;
+$color-danger: #ff5252;
+$color-warning: #fb8c00;
+$color-primary: #039be5;
+$color-secondary: #b6b7b9;
+$color-info: #67d7e8;
+$color-dark: #343a40;
+$color-light-dark: #252632;
+$color-purple: #7e57c2;
+$color-light: #78909c;
+$color-white: #fff;
+
+
+.ribbon-box {
+	margin: 5px 0;
+	.ribbon-wrapper {
+		background: #eceff1;
+		padding: 25px 15px 15px;
+		position: relative;
+	}
+	.ribbon {
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+		border-bottom-left-radius: 8px;
+		color: $color-white;
+		font-size: 14px;
+		line-height: 22px;
+		left: 0;
+		top: 0;
+		padding: 2px 8px;
+		position: absolute;
+		text-transform: capitalize;
+	}
+	p {
+		margin: 15px 0 0;
+	}
+	&.right {
+		.ribbon {
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 8px;
+			border-top-left-radius: 8px;
+			border-bottom-left-radius: 8px;
+			left: inherit;
+			right: 0;
+		}
+	}
+	&.vertical {
+		.ribbon-wrapper {
+			padding: 15px;
+		}
+		.ribbon {
+			margin: 0;
+			padding: 8px 5px;
+			text-align: center;
+			width: 30px;
+		}
+		p {
+			margin: 0 0 0 35px;
+			padding: 0;
+		}
+	}
+}
+

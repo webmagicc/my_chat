@@ -1,0 +1,264 @@
+$open: 'Open Sans', sans-serif;
+$pro: 'Source Sans Pro', sans-serif;
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+$bg-color: #eceff1;
+$gray-bg: #f5f5f5;
+
+$color-success: #50c37f;
+$color-danger: #ff5252;
+$color-warning: #fb8c00;
+$color-primary: #039be5;
+$color-secondary: #b6b7b9;
+$color-info: #67d7e8;
+$color-dark: #343a40;
+$color-light-dark: #252632;
+$color-purple: #7e57c2;
+$color-light: #78909c;
+$color-white: #fff;
+
+.form-group .form-control,
+form input,
+.input-group-addon {
+	border-radius: 0 !important;
+	&:focus {
+		border-color: #ced4da;
+	}
+}
+.form-inline {
+	.form-group {
+		margin-bottom: 15px;
+	}
+}
+input[type=checkbox], 
+input[type=radio] {
+	float: left;
+	margin-top: 0;
+}
+.chosen-container {
+	margin-bottom: 15px;
+}
+.chosen-container-single .chosen-single {
+	border-radius: 0;
+}
+
+.wizard {
+	margin: 20px auto;
+	background: $color-white;
+}
+
+.wizard .nav-tabs {
+	position: relative;
+	margin: 40px auto;
+	margin-bottom: 0;
+	border-bottom-color: #e0e0e0;
+}
+
+.wizard > div.wizard-inner {
+	position: relative;
+}
+
+.connecting-line {
+	height: 2px;
+	background: #e0e0e0;
+	position: absolute;
+	width: 80%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 50%;
+	z-index: 1;
+}
+
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus,
+.wizard .nav-tabs > li > a.active {
+	color: #555555;
+	cursor: default;
+	border: 0;
+	border-bottom-color: transparent;
+}
+
+span.round-tab {
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	display: inline-block;
+	border-radius: 100px;
+	background: $color-white;
+	border: 2px solid #e0e0e0;
+	z-index: 2;
+	position: absolute;
+	left: 0;
+	text-align: center;
+	font-size: 25px;
+}
+span.round-tab i{
+	color:#555555;
+}
+.wizard li.active span.round-tab,
+.wizard li a.active span.round-tab {
+	background: $color-white;
+	border: 2px solid #5bc0de;
+
+}
+.wizard li.active span.round-tab i,
+.wizard li a.active span.round-tab i {
+	color: #5bc0de;
+}
+
+span.round-tab:hover {
+	color: #333;
+	border: 2px solid #333;
+}
+.tab-content .list-inline li {
+	float: left;
+}
+.wizard .nav-tabs > li {
+	float: left;
+	position: relative;
+	text-align: center;
+	width: 25%;
+}
+
+.wizard li:after {
+	content: " ";
+	position: absolute;
+	left: 46%;
+	opacity: 0;
+	margin: 0 auto;
+	bottom: 0px;
+	border: 5px solid transparent;
+	border-bottom-color: #5bc0de;
+	transition: 0.1s ease-in-out;
+}
+
+.wizard li.active:after {
+	content: " ";
+	position: absolute;
+	left: 46%;
+	opacity: 1;
+	margin: 0 auto;
+	bottom: 0px;
+	border: 10px solid transparent;
+	border-bottom-color: #5bc0de;
+}
+
+.wizard .nav-tabs > li a {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	margin: 20px auto;
+	border-radius: 100%;
+	padding: 0;
+	position: relative;
+}
+.wizard .nav-tabs > li.disabled a {
+	cursor: not-allowed;
+}
+.wizard .nav-tabs > li a:hover {
+	background: transparent;
+}
+
+.wizard .tab-pane {
+	position: relative;
+	padding-top: 50px;
+}
+
+.wizard h3 {
+	margin-top: 0;
+}
+
+@media( max-width : 585px ) {
+
+	.wizard {
+		width: 90%;
+		height: auto !important;
+	}
+
+	span.round-tab {
+		font-size: 16px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+
+	.wizard .nav-tabs > li a {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+
+	.wizard li.active:after {
+		content: " ";
+		position: absolute;
+		left: 35%;
+	}
+}
+
+.stepwizard-step p {
+	margin-top: 0px;
+	color:#666;
+}
+.stepwizard-row {
+	display: table-row;
+}
+.stepwizard {
+	display: table;
+	width: 100%;
+	position: relative;
+}
+.stepwizard-step button[disabled] {
+    /*opacity: 1 !important;
+    filter: alpha(opacity=100) !important;*/
+}
+.stepwizard .btn.disabled, .stepwizard .btn[disabled], .stepwizard fieldset[disabled] .btn {
+	opacity:1 !important;
+	color:#bbb;
+}
+.stepwizard-row:before {
+	top: 22.5px;
+	bottom: 0;
+	position: absolute;
+	content:" ";
+	width: 100%;
+	height: 1px;
+	background-color: #ccc;
+	z-index: 0;
+}
+.stepwizard-step {
+	display: table-cell;
+	text-align: center;
+	position: relative;
+}
+.rounded-circle {
+	width: 45px;
+	height: 45px;
+	font-family: $pro;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 45px;
+	padding: 0;
+	text-align: center;
+}
+.wizard-form {
+	display: inline-block;
+	font-family: $open;
+	width: 100%;
+	.panel-title {
+		color: $basecolor;
+		font-size: 16px;
+	}
+	.control-label {
+		color: $color-light;
+		font-size: 14px;
+	}
+	.form-control {
+		font-family: $pro;
+		font-size: 15px;
+	}
+}
+.chosen-container .chosen-drop {
+	background-color: $color-white;
+}

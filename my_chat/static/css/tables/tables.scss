@@ -1,0 +1,41 @@
+$open: 'Open Sans', sans-serif;
+$pro: 'Source Sans Pro', sans-serif;
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+$bg-color: #eceff1;
+$gray-bg: #f5f5f5;
+
+$color-success: #50c37f;
+$color-danger: #ff5252;
+$color-warning: #fb8c00;
+$color-primary: #039be5;
+$color-secondary: #b6b7b9;
+$color-info: #67d7e8;
+$color-dark: #343a40;
+$color-light-dark: #252632;
+$color-purple: #7e57c2;
+$color-light: #78909c;
+$color-white: #fff;
+
+.dashboard-contents {
+	table.dataTable {
+		border: none !important;
+		margin: 0 !important;
+	}
+	table {
+		[class*="bg"] {
+			color: $color-white;
+		}
+		[class*="color-dark"] {
+			&:hover {
+				color: #343a40 !important;
+			}
+		}
+	}
+}
+.table .thead-dark th,
+.table-dark td, .table-dark th, .table-dark thead th {
+	background: $menu-bg;
+}

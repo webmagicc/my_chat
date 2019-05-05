@@ -1,0 +1,327 @@
+$open: 'Open Sans', sans-serif;
+$pro: 'Source Sans Pro', sans-serif;
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+$bg-color: #eceff1;
+
+$color-success: #50c37f;
+$color-danger: #ff5252;
+$color-warning: #fb8c00;
+$color-primary: #039be5;
+$color-secondary: #b6b7b9;
+$color-info: #67d7e8;
+$color-dark: #343a40;
+$color-light-dark: #252632;
+$color-purple: #7e57c2;
+$color-light: #78909c;
+$color-white: #fff;
+
+.modal {
+	.modal-header {
+		border-bottom: 1px solid rgba(0,0,0,.125);
+		.close {
+			color: $basecolor;
+			z-index: 9;
+		}
+	}
+	.modal-title {
+		color: $basecolor;
+		font-family: $open;
+		font-size: 14px;
+		font-weight: 600;
+		margin: 0;
+		text-transform: uppercase;
+	}
+	.modal-body {
+		color: $color-light;
+		font-size: 14px;
+		line-height: 22px;
+		h1,h2,h3,h4,h5,h6 {
+			color: $basecolor;
+			font-weight: 400;
+		}
+	}
+	.modal-content {
+		border-radius: 0;
+	}
+	.modal-footer {
+		border-top: 1px solid rgba(0,0,0,.125);
+	}
+}
+.left-modal {
+	.modal {
+		.modal-dialog {
+			margin: 0;
+			height: 100vh;
+			position: absolute;
+			top: -2px;
+			left: 0;
+			-webkit-transform: translate(-100%, 0) !important;
+			-moz-transform: translate(-100%, 0) !important;
+			-ms-transform: translate(-100%, 0) !important;
+			-o-transform: translate(-100%, 0) !important;
+			transform: translate(-100%, 0) !important;
+		}
+		.modal-content {
+			height: 100%;
+		}
+		&.show {
+			.modal-dialog {
+				-webkit-transform: translate(0, 0) !important;
+				-moz-transform: translate(0, 0) !important;
+				-ms-transform: translate(0, 0) !important;
+				-o-transform: translate(0, 0) !important;
+				transform: translate(0, 0) !important;
+			}
+		}
+	}
+}
+.right-modal {
+	.modal {
+		.modal-dialog {
+			margin: 0;
+			height: 100vh;
+			position: absolute;
+			top: -2px;
+			right: 0;
+			-webkit-transform: translate(1000%, 0) !important;
+			-moz-transform: translate(1000%, 0) !important;
+			-ms-transform: translate(1000%, 0) !important;
+			-o-transform: translate(1000%, 0) !important;
+			transform: translate(1000%, 0) !important;
+		}
+		.modal-content {
+			height: 100%;
+		}
+		&.show {
+			.modal-dialog {
+				-webkit-transform: translate(0, 0) !important;
+				-moz-transform: translate(0, 0) !important;
+				-ms-transform: translate(0, 0) !important;
+				-o-transform: translate(0, 0) !important;
+				transform: translate(0, 0) !important;
+			}
+		}
+	}
+}
+.center-modal,
+.fill-modal {
+	.modal {
+		.modal-dialog {
+			margin: 0;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+		&.show {
+			.modal-dialog {
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+.bottom-modal {
+	.modal {
+		.modal-dialog {
+			bottom: 0;
+			left: 50%;
+			margin: 0;
+			position: absolute;
+			-webkit-transform: translate(-50%, 0);
+			-moz-transform: translate(-50%, 0);
+			-ms-transform: translate(-50%, 0);
+			-o-transform: translate(-50%, 0);
+			transform: translate(-50%, 0);
+		}
+	}
+}
+.fill-modal {
+	.modal {
+		background: rgba(255, 255, 255, 0.97);
+		.modal-content {
+			border: none;
+		}
+	}
+}
+.background-modal {
+	display: inline-block;
+	margin: 2px 5px 2px 0;
+	.modal {
+		.modal-title,
+		.modal-body {
+			color: $color-white;
+			h1,h2,h3,h4,h5,h6 {
+				color: $color-white;
+			}
+		}
+	}
+	#success {
+		.modal-content {
+			background-color: #50c37f;
+			border-color: #50c37f;
+		}
+	}
+	#error {
+		.modal-content {
+			background-color: #ff5252;
+			border-color: #ff5252;
+		}
+	}
+	#warning {
+		.modal-content {
+			background-color: #fb8c00;
+			border-color: #fb8c00;
+		}
+	}
+	#primary {
+		.modal-content {
+			background-color: #039be5;
+			border-color: #039be5;
+		}
+	}
+	#secondary {
+		.modal-content {
+			background-color: #b6b7b9;
+			border-color: #b6b7b9;
+		}
+	}
+	#info {
+		.modal-content {
+			background-color: #67d7e8;
+			border-color: #67d7e8;
+		}
+	}
+	#black {
+		.modal-content {
+			background-color: #67d7e8;
+			border-color: #67d7e8;
+		}
+	}
+	#dark {
+		.modal-content {
+			background-color: #343a40;
+		}
+	}
+}
+.custom-modal {
+	display: inline-block;
+	margin: 2px 5px 2px 0;
+	.modal {
+		padding-top: 10vh;
+	}
+	.close {
+		margin: 0;
+		right: 15px;
+		top: 15px;
+		position: absolute;
+	}
+	.modal-header {
+		border: none;
+		padding: 0;
+		.close {
+			font-size: 13px;
+		}
+	}
+	.modal-body {
+		padding-top: 0;
+		i {
+			display: block;
+			font-size: 60px;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			font-weight: 700;
+		}
+	}
+	h1.m-0 {
+		font-size: 3.125rem;
+	}
+	.modal-footer {
+		button {
+			margin: 0 auto;
+		}
+	}
+}
+.modal-open .modal {
+	background: #30313e;
+}
+#modal-form,
+#subscribe-form {
+	.modal-dialog {
+		max-width: 800px;
+	}
+	.modal-content {
+		border: none;
+	}
+	label {
+		color: $color-light;
+		font-family: $open;
+		font-size: 14px;
+		font-weight: 600;
+		margin: 10px 0;
+	}
+	form {
+		.form-control {
+			border: 1px solid #e2e7ea;
+			font-family: $open;
+			font-size: 14px;
+			height: 45px;
+			margin-bottom: 10px;
+		}
+		input[type="submit"] {
+			border-color: $color-primary;
+			font-weight: 700;
+		}
+	}
+}
+#subscribe-form {
+	form {
+		position: relative;
+		z-index: 0;
+		&:before {
+			content: "\f061";
+			background: $color-primary;
+			font-family: 'FontAwesome';
+			color: $color-white;
+			font-size: 1rem;
+			height: 45px;
+			line-height: 45px;
+			width: 45px;
+			text-align: center;
+			right: 0;
+			top: 0;
+			position: absolute;
+			z-index: 1;
+		}
+		input {
+			padding-right: 60px;
+		}
+		input[type="submit"] {
+			background: transparent;
+			border-color: $color-primary;
+			font-size: 0;
+			height: 45px;
+			width: 45px;
+			right: 0;
+			top: 0;
+			padding: 0;
+			position: absolute;
+			z-index: 2;
+		}
+	}
+	span {
+		color: #b0bec5;
+		font-family: $open;
+		font-size: 12px;
+	}
+}

@@ -1,0 +1,37 @@
+.ribbon-box {
+  margin: 5px 0; }
+  .ribbon-box .ribbon-wrapper {
+    background: #eceff1;
+    padding: 25px 15px 15px;
+    position: relative; }
+  .ribbon-box .ribbon {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+    left: 0;
+    top: 0;
+    padding: 2px 8px;
+    position: absolute;
+    text-transform: capitalize; }
+  .ribbon-box p {
+    margin: 15px 0 0; }
+  .ribbon-box.right .ribbon {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    left: inherit;
+    right: 0; }
+  .ribbon-box.vertical .ribbon-wrapper {
+    padding: 15px; }
+  .ribbon-box.vertical .ribbon {
+    margin: 0;
+    padding: 8px 5px;
+    text-align: center;
+    width: 30px; }
+  .ribbon-box.vertical p {
+    margin: 0 0 0 35px;
+    padding: 0; }

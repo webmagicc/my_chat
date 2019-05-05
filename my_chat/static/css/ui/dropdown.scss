@@ -1,0 +1,47 @@
+$basecolor: #6a7074;
+$textcolor: #6a7074;
+$menu-bg: #343542;
+$menu-color: #8f9ca3;
+
+
+.dropdown {
+	.dropdown-menu {
+		border-radius: 0;
+		margin: 0;
+		.dropdown-item {
+			color: $basecolor;
+			font-size: 14px;
+			line-height: 24px;
+			padding: 5px 15px;
+			&:active {
+				background: transparent;
+			}
+			&:hover {
+				background: #eceff1;
+			}
+		}
+		i {
+			font-size: 14px;
+			margin-right: 5px;
+		}
+	}
+	.btn {
+		color: #fff !important;
+	}
+	&.on-hover {
+		overflow: hidden;
+		.dropdown-menu {
+			display: block !important;
+			opacity: 0;
+		}
+		&:hover {
+			overflow: visible;
+			.dropdown-menu {
+				opacity: 1;
+			}
+		}
+	}
+	&.background {
+		display: inline-block;
+	}
+}

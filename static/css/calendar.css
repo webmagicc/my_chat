@@ -1,0 +1,237 @@
+@import url("fullcalendar.min.css");
+#calendar {
+  max-height: 355px;
+  overflow: hidden; }
+
+.fc-left {
+  float: left; }
+
+.fc-right {
+  float: right; }
+
+.fc td, .fc th {
+  border: none; }
+
+.fc-button.hover, .fc-button:active, .fc-button:hover {
+  background-color: #e9e9e9; }
+
+.fc-header-title h2 {
+  font-size: 15px;
+  line-height: 1.6em;
+  color: #67757c;
+  margin-left: 10px; }
+
+.fc-header-left {
+  padding-left: 10px; }
+
+.fc-grid {
+  border: 0; }
+
+.fc-widget-content,
+.fc-scroller.fc-day-grid-container {
+  height: initial !important; }
+
+.fc-day-number {
+  color: #78909c;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400; }
+  .fc-day-number:hover {
+    background-color: #f5f5f5;
+    color: #6a7074; }
+
+.fc-sat.fc-today .fc-day-number,
+.fc-sun.fc-today .fc-day-number {
+  background-color: #ff5252 !important;
+  border-radius: 5rem;
+  color: #fff; }
+
+.fc-color-picker {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.fc-color-picker > li {
+  float: left;
+  font-size: 30px;
+  margin-right: 5px;
+  line-height: 30px; }
+
+.fc-color-picker > li .fa {
+  -webkit-transition: -webkit-transform linear .3s;
+  transition: -webkit-transform linear .3s;
+  transition: transform linear .3s;
+  transition: transform linear .3s, -webkit-transform linear .3s; }
+
+.fc-color-picker > li .fa:hover {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg); }
+
+.calendar {
+  float: left;
+  margin-bottom: 0; }
+
+.none-border .modal-footer {
+  border-top: none; }
+
+.fc-toolbar {
+  margin-bottom: 5px;
+  margin-top: 15px; }
+
+.fc-toolbar h2 {
+  color: #6a7074;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1; }
+
+.fc-day {
+  background: #fff; }
+
+.fc-toolbar .fc-state-active, .fc-toolbar .ui-state-active, .fc-toolbar .ui-state-hover, .fc-toolbar button:focus, .fc-toolbar button:hover {
+  z-index: 0; }
+
+.fc-widget-header {
+  border: 0; }
+
+.fc th.fc-widget-header {
+  color: #777c80;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 12px 0 20px; }
+
+.fc-view {
+  margin-top: 0; }
+
+.fc-toolbar {
+  border-bottom: 1px solid #eceff1;
+  display: inline-block;
+  margin: 0;
+  padding: 0 0 18px;
+  text-align: center;
+  width: 100%; }
+  .fc-toolbar .fc-left {
+    margin-top: 2px; }
+    .fc-toolbar .fc-left button {
+      float: right; }
+  .fc-toolbar .fc-right > .fc-corner-right {
+    display: none; }
+
+.fc-button-group {
+  text-align: right;
+  width: 80px; }
+  .fc-button-group button {
+    background-color: #eceff1;
+    border: none !important;
+    border-radius: 0 !important;
+    color: #889196;
+    display: inline-block;
+    float: none !important;
+    height: 22px;
+    width: 22px;
+    line-height: 21px;
+    margin: 0 0 0 5px !important;
+    padding: 0;
+    text-align: center; }
+    .fc-button-group button .fc-icon {
+      font-size: 17px;
+      height: inherit;
+      line-height: inherit;
+      margin: 0 !important;
+      padding: 0 !important;
+      top: inherit !important; }
+
+.fc button .fc-icon {
+  margin-left: -5px; }
+
+.fc-view-container table {
+  text-align: center;
+  width: 100%; }
+
+.fc-button {
+  background: #fff;
+  border: 1px solid rgba(120, 130, 140, 0.13);
+  color: #67757c;
+  text-transform: capitalize; }
+
+.description-block > .description-text, .external-event {
+  text-transform: uppercase; }
+
+.fc-button:hover {
+  background: #f2f4f8;
+  opacity: .8; }
+
+.fc-text-arrow {
+  font-family: inherit;
+  font-size: 16px; }
+
+.fc-state-hover {
+  background: #F5F5F5; }
+
+.fc-unthemed .fc-today {
+  background-color: transparent; }
+  .fc-unthemed .fc-today .fc-day-number {
+    background-color: #7e57c2;
+    color: #fff; }
+
+.fc-cell-overlay, .fc-state-highlight {
+  background: #f0f0f0; }
+
+.calendar-event, .fc-event {
+  background: #398bf7;
+  cursor: move;
+  text-align: center; }
+
+th.fc-day-header,
+td.fc-day-top {
+  float: left;
+  width: 14.28%; }
+
+.fc-bg {
+  display: none; }
+
+.fc-widget-content tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.fc-event {
+  border-radius: 0;
+  border: none;
+  color: #fff !important;
+  font-size: 13px;
+  margin: 1px -1px 0;
+  padding: 5px; }
+
+.calendar-event {
+  margin: 10px 5px 0 0;
+  padding: 6px 10px;
+  display: inline-block;
+  color: #fff;
+  min-width: 140px; }
+
+.calendar-event a {
+  float: right;
+  opacity: .6;
+  font-size: 10px;
+  margin: 4px 0 0 10px;
+  color: #fff; }
+
+.fc-basic-view td.fc-week-number span {
+  padding-right: 5px; }
+
+.fc-basic-view .fc-day-number {
+  padding: 2px 5px;
+  display: inline-block; }
+
+@media (min-width: 1100px) {
+  .fc-basic-view .fc-day-number {
+    padding: 2px 5px; } }
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+  float: none; }

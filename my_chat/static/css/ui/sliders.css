@@ -1,0 +1,50 @@
+.carousel-caption {
+  color: #fff; }
+  .carousel-caption h3,
+  .carousel-caption p {
+    color: #fff; }
+
+.carousel-item .overlay,
+.owl-carousel .overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute; }
+
+.carousel-indicators li {
+  cursor: pointer;
+  height: 5px; }
+
+.owl-nav.disabled {
+  cursor: auto !important;
+  display: block !important;
+  height: 30px;
+  left: 0;
+  top: 50%;
+  margin-top: -15px;
+  pointer-events: auto !important;
+  position: absolute;
+  width: 100%; }
+  .owl-nav.disabled button {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    font-size: 25px !important;
+    height: 30px;
+    width: 30px;
+    line-height: 30px !important;
+    position: relative;
+    text-align: center; }
+    .owl-nav.disabled button span {
+      height: 100%;
+      line-height: 1;
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%; }
+    .owl-nav.disabled button.owl-prev {
+      float: left; }
+    .owl-nav.disabled button.owl-next {
+      float: right; }

@@ -1,0 +1,29 @@
+{% extends 'login_base.html' %}
+
+ {% block form %}
+              <form method="post">
+              {{ user }}
+              {% csrf_token %}
+                  {% if form.errors %}
+                  {% for e in  form.errors %}
+                      {{ e }} <br>
+                      {% endfor %}
+                  {% endif %}
+              {{ form.errors }}
+            <div class="form-group {% if form.username.errors  %}error{% endif %}" >
+              {{ form.username }}
+            </div>
+            <div class="form-group {% if form.email.errors  %}error{% endif %}">
+                {{ form.email }}
+            </div>
+            <div class="form-group {% if form.password.errors  %}error{% endif %}">
+                {{ form.password }}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-flat mb-3 mt-3">Register</button>
+
+            <div class="register-link mt-1 text-center">
+              <p>Already have account ? <a href="/login/"> Sign in</a></p>
+            </div>
+          </form>
+                {% endblock form %}
