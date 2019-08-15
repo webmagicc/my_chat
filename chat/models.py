@@ -27,6 +27,7 @@ class GroupParticipant(models.Model):
                              on_delete=models.CASCADE, null=True)
     group = models.ForeignKey(ChatGroup, related_name='group_participant',
                               on_delete=models.CASCADE, null=True)
+    channel_name = models.CharField(max_length=100, db_index=True, default='', blank=True)
 
     def __str__(self):
         return self.user.username

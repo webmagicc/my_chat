@@ -26,6 +26,7 @@ class ChatConsumer(BaseChatConsumer):
             await self.close()
             return
         await self.channel_layer.group_add(self.channel, self.channel_name)
+        await self.save_channel_name()
 
     async def disconnect(self, code):
         await self.channel_layer.group_discard(self.channel, self.channel_name)
@@ -36,6 +37,16 @@ class ChatConsumer(BaseChatConsumer):
         if not user_id:
             return await self._throw_error({'detail': 'Missing user id'}, event=event['event'])
         await self.add_participant(user_id)
+        participants = await self.get_participants()
+        await self._send_message(participants, event=event['event'])
+
+    async def event_delete_participant(self, event):
+        user_id = event['data'].get('user_id')
+        if not user_id:
+            return await self._throw_error({'detail': 'Missing user id'}, event=event['event'])
+        channel_name = await self.delete_participant(user_id)
+        if channel_name:
+            await self.channel_layer.group_discard(self.channel, channel_name)
         participants = await self.get_participants()
         await self._send_message(participants, event=event['event'])
 
@@ -73,6 +84,24 @@ class ChatConsumer(BaseChatConsumer):
         if user:
             participant, _ = GroupParticipant.objects.get_or_create(group=self.group,
                                                                     user=user)
+
+    @database_sync_to_async
+    def save_channel_name(self):
+        group_participant = GroupParticipant.objects.get_or_create(group=self.group,
+                                                                   user=self.scope['user'])
+        if group_participant:
+            group_participant.channel_name = self.channel_name
+            group_participant.save()
+
+    @database_sync_to_async
+    def delete_participant(self, user_id):
+        user = get_user_model().objects.filter(pk=user_id).first()
+        if user:
+            group_participant = GroupParticipant.objects.filter(group=self.group, user=user).first()
+            if group_participant:
+                channel_name = group_participant.channel_name
+                group_participant.delete()
+                return channel_name
 
     @database_sync_to_async
     def save_message(self, message, user):

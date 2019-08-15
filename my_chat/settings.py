@@ -136,3 +136,8 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+try:
+    from .local import *
+except ImportError:
+    pass
