@@ -1,7 +1,8 @@
+import datetime
 from channels.db import database_sync_to_async
 from django.contrib.auth import get_user_model
 
-from chat.models import ChatGroup, GroupParticipant, ChatMessage
+from chat.models import ChatGroup, GroupParticipant, ChatMessage, ChatSession
 from .base import BaseChatConsumer
 
 
@@ -44,9 +45,10 @@ class ChatConsumer(BaseChatConsumer):
         user_id = event['data'].get('user_id')
         if not user_id:
             return await self._throw_error({'detail': 'Missing user id'}, event=event['event'])
-        channel_name = await self.delete_participant(user_id)
-        if channel_name:
-            await self.channel_layer.group_discard(self.channel, channel_name)
+        channel_names = await self.delete_participant(user_id)
+        if channel_names:
+            for channel_name in channel_names:
+                await self.channel_layer.group_discard(self.channel, channel_name)
         participants = await self.get_participants()
         await self._send_message(participants, event=event['event'])
 
@@ -87,21 +89,21 @@ class ChatConsumer(BaseChatConsumer):
 
     @database_sync_to_async
     def save_channel_name(self):
-        group_participant = GroupParticipant.objects.get_or_create(group=self.group,
-                                                                   user=self.scope['user'])
-        if group_participant:
-            group_participant.channel_name = self.channel_name
-            group_participant.save()
+        ChatSession.objects.get_or_create(group=self.group,
+                                          user=self.scope['user'],
+                                          channel_name=self.channel_name)
 
     @database_sync_to_async
     def delete_participant(self, user_id):
+        res = []
         user = get_user_model().objects.filter(pk=user_id).first()
         if user:
-            group_participant = GroupParticipant.objects.filter(group=self.group, user=user).first()
-            if group_participant:
-                channel_name = group_participant.channel_name
-                group_participant.delete()
-                return channel_name
+            GroupParticipant.objects.filter(user=user, group=self.group).delete()
+            for s in ChatSession.objects.filter(user=user, group=self.group, finished_at__isnull=True):
+                res.append(s.channel_name)
+                s.finished_at = datetime.datetime.now()
+                s.save()
+        return res
 
     @database_sync_to_async
     def save_message(self, message, user):

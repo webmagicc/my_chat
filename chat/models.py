@@ -27,10 +27,22 @@ class GroupParticipant(models.Model):
                              on_delete=models.CASCADE, null=True)
     group = models.ForeignKey(ChatGroup, related_name='group_participant',
                               on_delete=models.CASCADE, null=True)
-    channel_name = models.CharField(max_length=100, db_index=True, default='', blank=True)
 
     def __str__(self):
         return self.user.username
+
+
+class ChatSession(models.Model):
+    user = models.ForeignKey(get_user_model(), related_name='session_group_user',
+                             on_delete=models.CASCADE, null=True)
+    group = models.ForeignKey(ChatGroup, related_name='group_session',
+                              on_delete=models.CASCADE, null=True)
+    channel_name = models.CharField(max_length=100, db_index=True, default='', blank=True)
+    started_at = models.DateTimeField(null=True, auto_now_add=True)
+    finished_at = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return self.channel_name
 
 
 class ChatMessage(models.Model):
