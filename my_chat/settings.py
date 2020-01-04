@@ -137,6 +137,14 @@ CHANNEL_LAYERS = {
     },
 }
 
+EMAIL_HOST_USER = None
+EMAIL_HOST = None
+EMAIL_USE_TLS = None
+EMAIL_HOST_PASSWORD = None
+EMAIL_PORT = None
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
 try:
     from .local import *
 except ImportError:

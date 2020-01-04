@@ -1,6 +1,47 @@
+from functools import wraps
+import traceback
+from inspect import iscoroutinefunction
+
 from channels.generic.websocket import AsyncJsonWebsocketConsumer
+from channels.exceptions import AcceptConnection, DenyConnection, StopConsumer
+from django.core.mail import send_mail
+from django.conf import settings
+from asgiref.sync import sync_to_async
 
 
+def send_message(tb):
+    send_mail(
+        'WebSocket Error',
+        tb,
+        settings.DEFAULT_FROM_EMAIL,
+        ['vladimir@enkonix.com'],
+        fail_silently=False,
+    )
+
+
+def log_exceptions(f):
+    @wraps(f)
+    async def wrapper(*args, **kwargs):
+        try:
+            return await f(*args, **kwargs)
+        except (AcceptConnection, DenyConnection, StopConsumer):
+            raise
+        except Exception as exception:
+            tb = traceback.format_exc()
+            await sync_to_async(send_message)(tb)
+            raise
+
+    return wrapper
+
+
+def log_consumer_exceptions(klass):
+    for method_name, method in list(klass.__dict__.items()):
+        if iscoroutinefunction(method):
+            setattr(klass, method_name, log_exceptions(method))
+    return klass
+
+
+@log_consumer_exceptions
 class BaseChatConsumer(AsyncJsonWebsocketConsumer):
     async def _group_send(self, data, event=None):
         data = {"type": "response.proxy", "data": data, "event": event}
