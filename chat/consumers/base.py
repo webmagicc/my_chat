@@ -9,12 +9,37 @@ from django.conf import settings
 from asgiref.sync import sync_to_async
 
 
-def send_message(tb):
+def scope_to_str(scope):
+    res = '******* Scope ********* \n'
+    headers = scope.pop('headers', None)
+    for k, v in scope.items():
+        res += f"{k} - {v} \n"
+    res += "======== Headers =========\n"
+    for k, v in headers:
+        res += f"{k} - {v}\n"
+    res += "******* End Scope ********\n"
+    return res
+
+
+def extract_instance_info(instance):
+    res = '\n'
+    res += f"Instance: {instance.__class__} \n"
+    try:
+        res += f"{instance.scope['url_route']['kwargs']}\n"
+    except KeyError:
+        pass
+    res += scope_to_str(instance.scope)
+    return res
+
+
+def send_message(tb, instance):
+    info = extract_instance_info(instance)
+    text = f"{info} \n {tb}"
     send_mail(
         'WebSocket Error',
-        tb,
+        text,
         settings.DEFAULT_FROM_EMAIL,
-        ['vladimir@enkonix.com'],
+        ['your_email@example.com'],
         fail_silently=False,
     )
 
@@ -22,13 +47,14 @@ def send_message(tb):
 def log_exceptions(f):
     @wraps(f)
     async def wrapper(*args, **kwargs):
+        instance = args[0]
         try:
             return await f(*args, **kwargs)
         except (AcceptConnection, DenyConnection, StopConsumer):
             raise
         except Exception as exception:
             tb = traceback.format_exc()
-            await sync_to_async(send_message)(tb)
+            await sync_to_async(send_message)(tb, instance)
             raise
 
     return wrapper
