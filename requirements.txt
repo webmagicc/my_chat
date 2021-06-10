@@ -9,7 +9,7 @@ channels==2.1.7
 channels-redis==2.3.3
 constantly==15.1.0
 daphne==2.2.5
-Django==2.1.7
+Django==2.2.24
 factory-boy==2.11.1
 Faker==1.0.5
 gunicorn==19.9.0
